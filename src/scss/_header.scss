@@ -1,6 +1,8 @@
 // ========================= [ Header styles ] =========================
 .header {
-    background-color: #43adff;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), #8AC6E8;
+    position: relative;
+
 
     &.fixed {
         position: fixed;
@@ -9,56 +11,319 @@
         width: 100%;
         z-index: 2;
     }
+
+    &__decor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        @media (max-width: $breakpoint768) {
+            display: none;
+        }
+    }
+
+    &__woman {
+        position: absolute;
+        left: calc(50% - 219px);
+        img {
+            max-width: 100%;
+            width: 100%;
+
+            @media (max-width: $breakpoint1100) {
+                max-width: 90%;
+            }
+
+            @media (max-width: $breakpoint992) {
+                max-width: 85%;
+            }
+
+        }
+
+        @media (max-width: $breakpoint1100) {
+            left: calc(50% - 119px);
+        }
+
+        @media (max-width: $breakpoint992) {
+            left: calc(50% - 79px);
+        }
+
+        @media (max-width: $breakpoint768) {
+            top: 110px;
+            left: 0;
+        }
+
+        @media (max-width: $breakpoint480) {
+            top: 90px;
+        }
+
+    }
+
+    &__section {
+        margin-top: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding-bottom: 185px;
+        
+
+        @media (max-width: $breakpoint992) {
+            margin-top: 50px;
+        }
+        
+        @media (max-width: $breakpoint768) {
+            flex-wrap: wrap;
+            margin-top: 20px;
+            padding-bottom: 53px;
+        }
+
+        .left {
+
+            &__block {
+                flex: 0 1 470px;
+                z-index: 1;
+
+                @media (max-width: $breakpoint992) {
+                    flex: 0 1 270px;
+                }
+
+                @media (max-width: $breakpoint768) {
+                    order: 2;
+                    flex: 0 1 100%;
+                    margin-top: -30px;
+                }
+
+            }
+
+            &__header-big {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 45px;
+                line-height: 150%;
+                color: #44464A;
+
+                @media (max-width: $breakpoint768) {
+                    display: none;
+                }
+            }
+
+            &__header-small {
+                display: none;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 35px;
+                line-height: 140%;
+                color: #44464A;
+
+                @media (max-width: $breakpoint768) {
+                    display: block;
+                }
+
+                @media (max-width: $breakpoint480) {
+                    font-size: 24px;
+                }
+            }
+
+            &__item {
+                margin-top: 50px;
+                background: radial-gradient(100% 195.02% at 0% 0%, #77B7DB 30.73%, #8BCCF1 100%);
+                border-radius: 30px;
+                padding: 30px 50px;
+
+                @media (max-width: $breakpoint992) {
+                    padding: 20px 35px;
+                    max-width: 300px;
+                    width: 100%;
+                }
+
+                @media (max-width: $breakpoint768) {
+                    max-width: 100%;
+                }
+                p {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 150%;
+                    color: #FFFFFF;
+                }
+
+                a {
+                    margin-top: 30px;
+                    background: #FFFFFF;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 150%;
+                    color: #3C7CA0;
+                    border: 1px solid white;
+
+                    @media (max-width: $breakpoint992) {
+                        width: 100%;
+                    }
+
+                    &:hover {
+                        color: white;
+                        background: transparent;
+                    }
+                }
+            }
+        }
+
+        .right {
+
+            &__block {
+                flex: 0 1 340px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 20px;
+                z-index: 1;
+
+                @media (max-width: $breakpoint768) {
+                    order: 1;
+                    flex: 0 1 100%;
+                    justify-content: flex-end;
+                    margin-top: 120px;
+                }
+            }
+
+            &__item {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 150%;
+                color: #44464A;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 10px 70px rgba(79, 146, 170, 0.1);
+                border-radius: 30px;
+                height: 67px;
+
+                @media (max-width: $breakpoint480) {
+                    font-size: 12px;
+                    height: 38px;
+                }
+            }
+
+            &__item-first {
+                width: 235px;
+                background: #FFDCE8;
+                
+                @media (max-width: $breakpoint480) {
+                    width: 144px;
+                }
+            }
+
+            &__item-second {
+                width: 230px;
+                background: #DEE0FF;
+
+                @media (max-width: $breakpoint480) {
+                    width: 140px;
+                }
+            }
+
+            &__item-third {
+                width: 338px;
+                background: #CEEBFC;
+
+                @media (max-width: $breakpoint480) {
+                    width: 212px;
+                }
+            }
+        }
+    }
 }
 .navbar {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 30px 0;
+
+    @media (max-width: $burgerBreakpoint) {
+        padding: 20px 0;
+    }
 }
+
 .logo {
-    a {
-        color: white;
+    z-index: 2222;
+    img {
+        width: 166.21px;
+
+        @media (max-width: $breakpoint480) {
+            width: 83px;
+        }
     }
 }
 
 // ========================== [ Menu styles ] ==========================
 .menu {
     display: flex;
-    gap: 30px;
+    gap: 10px;
+
+    @media (max-width: $breakpoint1100) {
+        gap: 6px;
+    }
+
+
 
     // .menu__item
     &__item {
         display: flex;
         position: relative;
+        z-index: 22;
+
+
+        &:last-child {
+            .menu__item-link {
+                border: 1px solid #44464A;
+
+                @media (max-width: $breakpoint768) {
+                    font-size: 12px;
+                }
+
+                &:hover {
+                    background: transparent;
+                    border: 1px solid #44464A;
+                    color: #44464A;
+                }
+            }
+        }
     }
 
     // .menu__item-link
     &__item-link {
-        color: white;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
         display: flex;
+        align-items: center;
+        color: #44464A;
         position: relative;
-        transition: 0.5s color;
-        &:after {
-            position: absolute;
-            content: '';
-            left: 0;
-            bottom: -3px;
-            background: #131418;
-            height: 1px;
-            width: 100%;
-            transform: scale(0);
-            transition: 0.5s transform;
+        transition: all .4s ease;
+        border-radius: 130px;
+        padding: 5px 20px;
 
-            // Comment if you need border animation
-            display: none;
+       @media (max-width: $breakpoint1100) {
+           padding: 5px 12px;
+       }
+
+        @media (max-width: $burgerBreakpoint) {
+            font-size: 26px;
         }
+
+
+
         &:hover {
-            color: #131418;
-            &:after {
-                transform: scale(1);
-            }
+            color: white;
+            background-color: #44464A;
         }
+
+
     }
 
     // Mobile menu styles
@@ -71,10 +336,11 @@
         width: 100vw;
         display: none;
 
+
         &.active {
             display: flex;
             left: 0;
-            top: 0;
+            top: 70px;
             height: 100vh;
             width: 100vw;
             flex-direction: column;
@@ -84,6 +350,20 @@
             z-index: 2;
             animation: fade 0.1s linear;
         }
+    }
+}
+
+.date__mobile {
+    display: none;
+
+    @media (max-width: $burgerBreakpoint) {
+        display: block;
+    }
+}
+
+.date__main {
+    @media (max-width: $burgerBreakpoint) {
+        display: none;
     }
 }
 
@@ -100,14 +380,14 @@
 
         &.active {
             &:before {
-                background: $burgerActiveColor;
+                background:  #44464A;
                 transform: rotate(45deg);
                 transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
                 top: 8px;
             }
 
             &:after {
-                background: $burgerActiveColor;
+                background:  #44464A;
                 transform: rotate(-45deg);
                 bottom: 10px;
                 transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
@@ -124,7 +404,7 @@
             position: absolute;
             height: 2px;
             width: 100%;
-            background: $burgerColor;
+            background:  #44464A;
             transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
         }
 
@@ -141,7 +421,7 @@
             top: 9px;
             right: 0;
             width: 100%;
-            background: $burgerColor;
+            background: #44464A;
             height: 2px;
             transform: scale(1);
             transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;

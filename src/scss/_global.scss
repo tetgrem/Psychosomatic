@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap');
+
+
 // Container
 .container {
     max-width: ($containerWidth + $containerPadding) + px;
@@ -24,7 +27,7 @@
 
 // Body & Locked
 body {
-    font-family: $fontMain;
+    font-family: 'Mulish', sans-serif;
     &.locked {
         overflow: hidden;
     }
@@ -44,4 +47,18 @@ body {
     100% {
         opacity: 1;
     }
+}
+
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 370px;
+    height: 70px;
+    border-radius: 130px;
+    transition: all .3s ease;
 }

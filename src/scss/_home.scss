@@ -162,3 +162,161 @@
 
 //========================[situation__section END]==================//
 
+
+//key__section
+
+.key {
+
+  &__section {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), #8AC6E8;
+    padding: 80px 0;
+    color: #44464A;
+    position: relative;
+
+    @media (max-width: $breakpoint768) {
+      padding: 40px 0;
+    }
+
+    h1 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 45px;
+      line-height: 150%;
+      max-width: 850px;
+      width: 100%;
+
+      @media (max-width: $breakpoint768) {
+        font-size: 24px;
+      }
+    }
+
+    a {
+      margin: 50px auto 0 auto;
+      color: white;
+      background: radial-gradient(100% 195.02% at 0% 0%, #77B7DB 30.73%, #8BCCF1 100%);
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 150%;
+
+      @media (max-width: $breakpoint480) {
+        max-width: 100%;
+        width: 100%;
+        font-size: 18px;
+      }
+
+      &:hover {
+        box-shadow: 0 10px 50px rgba(79, 146, 170, 0.6);
+      }
+    }
+  }
+
+  &__rows {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+
+  }
+
+  &__item {
+    flex: 0 1 370px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 70px rgba(79, 146, 170, 0.1);
+    border-radius: 30px;
+    min-height: 212px;
+    cursor: pointer;
+    transition: all .3s ease;
+    z-index: 2;
+    background: white;
+
+
+    @media (max-width: $breakpoint1200) {
+      flex: 1 1 40%;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex: 1 1 100%;
+    }
+
+    @media (max-width: $breakpoint480) {
+      padding: 20px 15px;
+    }
+
+    &:hover {
+      box-shadow: 0 10px 70px rgba(79, 146, 170, 0.3);
+    }
+
+    .item__row {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+
+      @media (max-width: $breakpoint480) {
+        gap: 20px;
+      }
+
+      h2 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+
+        @media (max-width: $breakpoint480) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    p {
+      margin-top: 15px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+
+  &__decor-left {
+    left: 0;
+    top: 264px;
+  }
+
+  &__decor-right {
+    top: 354px;
+    right: 211px;
+  }
+
+  &__decor-left,
+  &__decor-right {
+    z-index: 1;
+    position: absolute;
+
+    @media (max-width: $breakpoint992) {
+      display: none;
+    }
+  }
+}
+
+//========================[key__section END]==================//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psychosomatic</title>
     <link rel="stylesheet" href="./css/style.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+
 </head>
 
 <body class="main__body">
@@ -806,7 +809,52 @@
 
         <section class="reviews__section">
             <div class="container">
+                <div class="reviews__block">
+                    <div class="reviews__left">
+                        <h1>Відгуки</h1>
+                        <div class="reviews__swiper">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="./img/reviews_1.png" data-fancybox="gallery" data-caption="Відгук 1" alt="img"></div>
+                                    <div class="swiper-slide"><img src="./img/reviews_2.png" data-fancybox="gallery" data-caption="Відгук 2" alt="img"></div>
+                                    <div class="swiper-slide"><img src="./img/reviews_1.png" data-fancybox="gallery" data-caption="Відгук 3" alt="img"></div>
+                                    <div class="swiper-slide"><img src="./img/reviews_2.png" data-fancybox="gallery" data-caption="Відгук 4" alt="img"></div>
+                                    <div class="swiper-slide"><img src="./img/reviews_1.png" data-fancybox="gallery" data-caption="Відгук 5" alt="img"></div>
+                                    <div class="swiper-slide"><img src="./img/reviews_2.png" data-fancybox="gallery" data-caption="Відгук 6" alt="img"></div>
+                                    <div class="swiper-slide"><img src="./img/reviews_1.png" data-fancybox="gallery" data-caption="Відгук 7" alt="img"></div>
+                                    <div class="swiper-slide"><img src="./img/reviews_2.png" data-fancybox="gallery" data-caption="Відгук 8" alt="img"></div>
 
+                                </div>
+                            </div>
+                            <div class="swiper__elements">
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper__buttons">
+                                    <button class="button__prev prev__btn">
+                                        <svg width="22"  height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M5.24264 11.3033L0.469669 6.53031C0.176777 6.23741 0.176777 5.76254 0.469669 5.46965L5.24264 0.696677C5.53553 0.403784 6.01041 0.403784 6.3033 0.696677C6.59619 0.989571 6.59619 1.46444 6.3033 1.75734L2.81066 5.24998L21 5.24998C21.4142 5.24998 21.75 5.58576 21.75 5.99998C21.75 6.41419 21.4142 6.74998 21 6.74998L2.81066 6.74998L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033Z" fill="white"/>
+                                        </svg>
+                                    </button>
+                                    <button class="button__next next__btn">
+                                        <svg width="22"  height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7574 0.696721L21.5303 5.46969C21.8232 5.76259 21.8232 6.23746 21.5303 6.53035L16.7574 11.3033C16.4645 11.5962 15.9896 11.5962 15.6967 11.3033C15.4038 11.0104 15.4038 10.5356 15.6967 10.2427L19.1893 6.75002H1C0.585786 6.75002 0.25 6.41424 0.25 6.00002C0.25 5.58581 0.585786 5.25002 1 5.25002H19.1893L15.6967 1.75738C15.4038 1.46449 15.4038 0.989614 15.6967 0.696721C15.9896 0.403827 16.4645 0.403827 16.7574 0.696721Z" fill="white"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__right">
+                        <img src="./img/reviews__video.png" alt="img">
+                        <div class="video__play">
+                            <div class="video__button">
+                                <svg width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30.501 13.6699C33.8343 15.5944 33.8343 20.4056 30.501 22.3301L8.00098 35.3205C4.66764 37.245 0.500975 34.8394 0.500975 30.9904L0.500976 5.00962C0.500976 1.16062 4.66764 -1.24501 8.00098 0.679491L30.501 13.6699Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <h2>Дивитись відео-відгук</h2>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -814,6 +862,7 @@
     <!-- Footer -->
     <!-- @@include('./html/_footer.html') -->
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
 <script src="./js/scripts.min.js"></script>
 

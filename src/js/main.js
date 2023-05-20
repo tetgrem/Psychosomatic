@@ -41,6 +41,33 @@ function burgerMenu() {
 }
 burgerMenu()
 
-console.log(window.innerWidth)
+Fancybox.bind("[data-fancybox]", {
 
+});
+
+const swiper = new Swiper('.swiper', {
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    navigation: {
+        nextEl: '.next__btn',
+        prevEl: '.prev__btn',
+    },
+    loop: true,
+
+
+      breakpoints: {
+
+        200: {
+            slidesPerGroup: 1,
+            slidesPerView: 1,
+        },
+        768: {
+          slidesPerGroup: 2,
+          slidesPerView: 2,
+      },
+    }
+});
 

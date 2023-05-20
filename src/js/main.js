@@ -1,4 +1,20 @@
-// Мобильное меню бургер
+'use strict'
+
+const targetBlock = document.querySelectorAll('.targets__item')
+
+targetBlock.forEach((item) => {
+    item.addEventListener('click', () => {
+        if (window.innerWidth <= 768 && item.classList.contains('active')) {
+            item.classList.remove('active')
+        } else {
+            document
+                .querySelectorAll('.targets__item')
+                .forEach(item => item.classList.remove('active'))
+            item.classList.add('active')
+        }
+    })
+})
+
 function burgerMenu() {
     const burger = document.querySelector('.burger')
     const menu = document.querySelector('.menu')
@@ -24,3 +40,7 @@ function burgerMenu() {
     })
 }
 burgerMenu()
+
+console.log(window.innerWidth)
+
+

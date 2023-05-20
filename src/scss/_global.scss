@@ -63,4 +63,13 @@ body {
     height: 70px;
     border-radius: 130px;
     transition: all .3s ease;
+
+    &:hover {
+        box-shadow: 0 10px 50px rgba(79, 146, 170, 0.6);
+    }
+
+    @media (max-width: $breakpoint480) {
+        width: 100%;
+        font-size: 18px;
+    }
 }

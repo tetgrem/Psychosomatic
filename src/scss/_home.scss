@@ -1963,10 +1963,17 @@
         right: -30.04px;
       }
 
+      @media (max-width: $breakpoint768) {
+        right: 0;
+      }
+
       &.second {
         @media (max-width: $breakpoint992) {
           top: -90.21px;
           right: -30.04px;
+        }
+        @media (max-width: $breakpoint768) {
+          right: 0;
         }
       }
     }
@@ -2543,6 +2550,139 @@
 
 }
 
+//========================[questions__section END]==================//
+
+
+
+//faq__section
+
+.faq {
+
+  &__section {
+    padding: 80px 0;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), #8AC6E8;
+    color: #44464A;
+
+    @media (max-width: $breakpoint768) {
+      padding: 40px 0;
+    }
+
+    h1 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 45px;
+      line-height: 150%;
+
+      @media (max-width: $breakpoint768) {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__block {
+    //margin-top: 20px;
+
+    .accordion {
+      .accordion__item {
+        background: #FFFFFF;
+        color: #44464A;
+        padding: 15px 30px;
+        box-shadow: 0 10px 70px rgba(79, 146, 170, 0.1);
+        border-radius: 20px;
+        margin-top: 30px;
+
+        // Trigger styles
+        .accordion__item-trigger {
+          display: flex;
+          padding: 20px 0;
+          align-items: center;
+          cursor: pointer;
+          gap: 20px;
+
+          .trigger__text {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 150%;
+            color: #44464A;
+            margin-left: 10px;
+          }
+
+          .trigger__img {
+            position: relative;
+            background: #ECF5FB;
+            margin-left: auto;
+            width: 30px;
+            height: 30px;
+            padding: 14px 8px;
+            border-radius: 100%;
+
+            .trigger__line-1 {
+              display: block;
+              width: 14px;
+              height: 2px;
+              background: #3C7CA0;
+              border-radius: 100px;
+            }
+
+            .trigger__line-2 {
+              display: block;
+              width: 14px;
+              height: 2px;
+              background: #3C7CA0;
+              margin-top: -2px;
+              border-radius: 100px;
+              transform: rotate(90deg);
+            }
+          }
+        }
+        // Active state styles
+        &.accordion__item-active {
+          .accordion__item-content {
+            display: block;
+          }
+
+          .trigger__line-2 {
+            transform: rotate(0) !important;
+            transition: 0.1s transform ease;
+          }
+
+          .trigger__line-1 {
+            opacity: 0;
+            transition: 0.1s all ease;
+          }
+        }
+
+        // Content styles
+        .accordion__item-content {
+          padding-bottom: 20px;
+          display: none;
+          animation: fade 0.3s ease;
+
+          .content__text {
+            margin-left: 25px;
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            
+            @media (max-width: $breakpoint480) {
+              margin-left: 10px;
+            }
+
+            &:first-child {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
 
 
 
@@ -2614,13 +2754,59 @@
 }
 
 
+//========================[request__section END]==================//
 
 
 
 
 
 
+// ************************ Модальное окно ************************ //
+.modal__wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(57, 103, 129, 0.7);
+  backdrop-filter: blur(7.5px);
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  display: none;
 
+  .modal {
+    padding: 40px 50px;
+    background: #FFFFFF;
+    box-shadow: 0 10px 70px rgba(79, 146, 170, 0.1);
+    border-radius: 30px;
+    position: relative;
+    color: #44464A;
+    width: 570px;
+
+    &__title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 150%;
+    }
+    &__body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    &__close {
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+}
+
+// ************************ Кнопка вызова модального окна ************************ //
 
 
 
